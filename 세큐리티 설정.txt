@@ -1,0 +1,54 @@
+ㅇ초기 설정
+Developer Tools - spring boot devtools
+Web - spring web
+Security - spring security, oauth2client
+SQL - mybatis framework, mysql driver
+NoSQL - spring data redis
+I/O - validation
+
+17로 진행
+
+lombok 설치
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.36</version>
+    <scope>provided</scope>
+</dependency>
+
+
+
+ㅇdocker 설치 (구글로 가입함)
+설치 시 모두 체크.
+설치 후 로그인.
+
+야놀에 추가
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+mvn추가 SpringDoc OpenAPI Starter WebMVC UI
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+ㅇmvn jjwt추가
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+

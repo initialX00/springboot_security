@@ -1,0 +1,7 @@
+spring:
+  config:
+    import: application-secret.yml
+mybatis:
+  mapper-locations:
+    - /mappers/*.xml
+    - /mappers/user/*.xml

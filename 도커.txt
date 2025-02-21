@@ -1,0 +1,26 @@
+ㅇredis 설치
+doker hub에서 redis 검색 후 pull받기.
+또는 gitbash에서 docker pull redis 입력.
+images에서 redis 설치 완료 확인하기.
+
+
+ㅇredis 접근
+redis가 캐쉬와 비슷한 역할이라서 db에 접근하지 않고 redis에서 정보를 접근하여 데이터 처리를 빠르게 하기위한 용도이다.
+코드 로직 생성 시 레디스 정보 먼저 확인한 후 정보가 없으면 데이터베이스로 가도록 설계하기.
+
+docker run --name redis-server -p 6379:6379 -d redis로 redis이름 생성 및 서버주소 할당
+그 후 컨테이너 주소 생성 (예 7ef239e777a7c8736439e18521a1a6a3de0bf5c88bcce316cbf4c26418d6b7d0)
+
+docker ps로 컨테이너 정보 받기
+
+docker exec -it redis-server redis-cli로 컨테이너 접속
+000.0.0.0:6379> 형식으로 나오면 성공.
+
+set (이름) (값) ex (시간s)으로 캐시 설정하기 
+
+ttl (이름)으로 입력하여 캐시 유효시간 확인 (-1은 만료 시간 없음, -2는 해당 이름이 없음)
+
+keys *로 존재하는 모든 캐시 확인하기
+
+
+
